@@ -17,8 +17,8 @@ The modifications to ZSH are as follows:
 - ``ll``: Alternative to ``ls -l --color=auto``
 - ``edit``: Alternative to ``nano``
 - ``sedit``: Alternative to ``sudo nano``
--  ``jsh``: Opens JShell
--    ``editpath``: Quick access to VSH configuration file.
+- ``jsh``: Opens JShell
+- ``editpath``: Quick access to VSH configuration file.
 - ``obsdn``: Opens Obsidian (if installed)
 
 ### PATH Modifications
@@ -66,7 +66,7 @@ The list of programs that come bundled with VSH. Underlined Links are programs w
 - Clock (``clock``)
        - A simple clock app. Prints the time, accurate to the second, every second.
 
-- Valerie's File Manager (``vfm``)
+- [Valerie's File Manager (``vfm``)](https://github.com/thequeenofclubs/FileManager)
        - A CLI file manager, allows creating, renaming, moving and deleting files.
        - Also has a search function.
 
