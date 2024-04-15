@@ -11,32 +11,32 @@ This is a revised version of ZSH, the Z Shell, a Unix shell that is widely used 
 The modifications to ZSH are as follows:
 
 ### Aliases
-       - ``cd/``: Sets the current working directory to ``~/``
-       - ``cls``: Equivalent to ``clear``, clears the screen.
-       - ``vdb vsh``: Shows this page.
-       - ``ll``: Alternative to ``ls -l --color=auto``
-       - ``edit``: Alternative to ``nano``
-       - ``sedit``: Alternative to ``sudo nano``
-       - ``jsh``: Opens JShell
-       - ``editpath``: Quick access to VSH configuration file.
-       - ``obsdn``: Opens Obsidian (if installed)
+- ``cd/``: Sets the current working directory to ``~/``
+- ``cls``: Equivalent to ``clear``, clears the screen.
+- ``vdb vsh``: Shows this page.
+- ``ll``: Alternative to ``ls -l --color=auto``
+- ``edit``: Alternative to ``nano``
+- ``sedit``: Alternative to ``sudo nano``
+-  ``jsh``: Opens JShell
+-    ``editpath``: Quick access to VSH configuration file.
+- ``obsdn``: Opens Obsidian (if installed)
 
 ### PATH Modifications
-       - Added ``~/Scripts`` to the ``$PATH`` environment
-       - Added ``~/Command`` to the ``$PATH`` environment
-       - Added ``~/Command/Scripts`` to the ``$PATH`` environment
-       - Added VSCode to the ``$PATH`` for quick access to VSCode.
-       - Added Cursor to the ``$PATH`` for quick access to Cursor.
+- Added ``~/Scripts`` to the ``$PATH`` environment
+- Added ``~/Command`` to the ``$PATH`` environment
+- Added ``~/Command/Scripts`` to the ``$PATH`` environment
+- Added VSCode to the ``$PATH`` for quick access to VSCode.
+- Added Cursor to the ``$PATH`` for quick access to Cursor.
 
 ### Font Formatting
-       - VSH contains formatting variables that can be used with ``echo -e``:
-       - ``${bold}``: Makes text immediately preceding bold.
-       - ``${normal}``: Makes text immediately preceding normal.
-       - ``${RED}``: Makes text immediately preceding red.
-       - ``${NC}``: Makes text immediately preceding have no colour.
+- VSH contains formatting variables that can be used with ``echo -e``:
+- ``${bold}``: Makes text immediately preceding bold.
+- ``${normal}``: Makes text immediately preceding normal.
+- ``${RED}``: Makes text immediately preceding red.
+- ``${NC}``: Makes text immediately preceding have no colour.
 
 ### Application-Specific Modifications
-       - VSH adds syntax highlighting to the ``nano`` editor for most languages.
+- VSH adds syntax highlighting to the ``nano`` editor for most languages.
     
 
 
