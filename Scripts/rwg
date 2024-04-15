@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-cd /Universe/Core/vshconf/Scripts/rwglib
+cd ~/Scripts/rwglib
 FILE=words.dat
 
 # get line count for $FILE (simulate 'wc -l')
