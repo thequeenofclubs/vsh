@@ -1,6 +1,6 @@
 #!/bin/zsh
 # Program Information
-    # Gabe's Shell Script for SSH connections
+    # Valerie's Shell Script for SSH connections
     # Primarily used to log in to York University servers.
     # Has 3 options, -c, -d, and no argument.
     # -c: Connect to a custom ssh address with the default username.
@@ -15,14 +15,12 @@
 # Begin Shell Script
 
 # Introduce the user to the program.
-echo "Gabe's Script to login to York's System. For help, run the program with the -help flag. Cancel logins anytime with ^C (Control-C)"
+echo "Valerie's Script to login to York's System. For help, run the program with the -help flag. Cancel logins anytime with ^C (Control-C)"
 
 # Check if the argument is "-d".
 if [[ $1 == "-d" ]]; then
 # If argument is "-d", login with default parameters.
 echo "Logging in as gabeg25 on default system red.eecs.yorku.ca"
-echo "Note: This server may be deactivated due to the switch from"
-echo "engineering to computer science."
 ssh gabeg25@red.eecs.yorku.ca
 fi
 
