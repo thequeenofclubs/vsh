@@ -77,10 +77,6 @@ The list of programs that come bundled with VSH. Underlined Links are programs w
 - [Randomized Word Guesser (``rwg``)](https://github.com/thequeenofclubs/RandomizedWordGuesser)
        - A game which scrambles up a word and allows the user to guess at the original word.
 
-- York University Login (``yl``)
-       - Quick ssh access to a York University Server.
-       - ``yl -d`` is used for default login parameters.
-
 
 
 ## Installation Instructions
