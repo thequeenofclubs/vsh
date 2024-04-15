@@ -66,7 +66,7 @@ The list of programs that come bundled with VSH. Underlined Links are programs w
 - Clock (``clock``)
        - A simple clock app. Prints the time, accurate to the second, every second.
 
-- [Valerie's File Manager (``vfm``)](https://github.com/thequeenofclubs/FileManager)
+- [Valerie's File Manager (``vfm``)](https://github.com/thequeenofclubs/vfm)
        - A CLI file manager, allows creating, renaming, moving and deleting files.
        - Also has a search function.
 
