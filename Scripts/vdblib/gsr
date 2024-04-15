@@ -1,0 +1,20 @@
+
+Gabe's Database
+---------------
+
+Google Search (gsr)
+
+Used to search Google from within the terminal.
+
+
+
+Usage
+-----
+
+gsr search_query (where underscores are used in place of spaces)
+
+Will open your web browser to the results of the google search.
+
+
+--- END OF ENTRY ---
+Last Modified: February 10, 2023

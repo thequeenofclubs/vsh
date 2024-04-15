@@ -1,0 +1,91 @@
+Gabe's Manual
+-------------
+
+Unix terminal commands are used to perform the basic commands that are required to navigate and operate a
+unix based operating system.
+
+A more condensed version of this entry is available in Obsidian under "Lecture Notes / Week 1 Lecture 1"
+in the EECS2032 Folder.
+
+Main Commands
+-------------
+ls - Lists the files in the current working directory.
+cp - Copy a specific file to a specified directory.
+mv - Move a specific file to a specified directory.
+mkdir - Creates a new directory with a specified name.
+cd - Change the current working directory to the specified folder.
+pwd - Prints the current working directory.
+cat - Displays the contents of a file on the screen.
+less - Displace the contents of a file onscreen one page at a time, scrollable.
+more - Old and deprecated version of less. Use less instead unless it creates issues.
+head - Writes the first 10 lines of a file into the terminal.
+tail - Writes the last 10 lines of a file into the terminal.
+grep - Searches a file for some specific text or characters.
+bg - Move to background.
+fd - Move to foreground.
+CTRL + C - Terminate the currently running process.
+CTRL + Z - Undo.
+kill - Terminate a specified process.
+ps - Reports information about currently running processes.
+od - Octal dump. Used to dump the raw data of a file onto the screen.
+diff - Show the differences between two files.
+ln - Creates a link to a specific file or directory.
+echo - Show text on the screen. Mostly used for scripting.
+alias - Used to create an alias (short form) shortcut for a command.
+
+
+PATH Variables
+--------------
+
+Every unix system has a PATH variable. This variable contains the location of all programs accessible by the
+current shell. If the user tries to execute a command without a filepath, and that command is not located
+in the PATH variable, the program will fail.
+
+
+You can add a folder to the PATH by modifying your ~./zprofile file with the following command:
+
+export PATH="$PATH:%folder to add goes here without percent signs%"
+
+
+
+Redirection and Pipes
+---------------------
+
+You can send the output of one command into another command using the | operator.
+You can redirect information to and from a program by using "<" and ">".
+For example, if we have a prgorgam that takes an input and generates output in a file "a.out", we can
+then run "a.out < file1.txt > file2.txt".
+
+If we have a program that creates console output, we can redirect that output into another command as input
+using the | operator.
+
+
+Performing Commands as System
+-----------------------------
+To perform a command as system instead of as the user, put a backslash in front of the command.
+
+
+Understanding File Permissions
+------------------------------
+
+When running ls -l (ll in gsh), you can see a list of all files with their permissions information at the
+beginning of the line. It will look something like this:
+
+-rw------- file.txt
+
+There are 9 characters in the permissions data, following the first character representing whether the file
+is a directory or not. These 9 characters are split into three groups. User, group and other.
+
+r: can read
+w: can write
+x: can execute
+d: file is directory.
+
+
+An example of a permissions block for a folder where all groups have all permissions would look like this:
+drwxrwxrwx Notes
+
+
+--END OF ENTRY--
+
+Last Modified: November 22, 2022

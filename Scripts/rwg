@@ -1,0 +1,118 @@
+#!/bin/bash
+clear
+cd /Universe/Core/vshconf/Scripts/rwglib
+FILE=words.dat
+
+# get line count for $FILE (simulate 'wc -l')
+lc=0
+while read -r line; do
+ ((lc++))
+done < $FILE
+
+# get a random number between 1 and $lc
+rnd=$RANDOM
+let "rnd %= $lc"
+((rnd++))
+
+# traverse file and find line number $rnd
+i=0
+while read -r line; do
+ ((i++))
+ [ $i -eq $rnd ] && break
+done < $FILE
+
+echo "Welcome to randomized word guesser! Your goal is to guess the correct word given that same word with its letters in random order."
+echo "For example, if the correct word is grapes, you may be given any combination of those letters, one of which could be paserg."
+echo "You would then have to piece together the original word. You get as many guesses as you like. The program is waiting for your guess, so have fun!"
+echo "If you give up, type igiveup as your guess."
+
+scramble() {
+    # $1: string to scramble
+    # return in variable scramble_ret
+    local a=$1 i
+    scramble_ret=
+    while((${#a})); do
+        ((i=RANDOM%${#a}))
+        scramble_ret+=${a:i:1}
+        a=${a::i}${a:i+1}
+    done
+}
+
+
+
+
+
+continueplaying="y"
+
+while [[ $continueplaying == "y" ]]
+do
+# get line count for $FILE (simulate 'wc -l')
+lc=0
+while read -r line; do
+ ((lc++))
+done < $FILE
+
+# get a random number between 1 and $lc
+rnd=$RANDOM
+let "rnd %= $lc"
+((rnd++))
+
+# traverse file and find line number $rnd
+i=0
+while read -r line; do
+ ((i++))
+ [ $i -eq $rnd ] && break
+done < $FILE
+
+
+originalword=$line
+scramble $originalword
+line=$scramble_ret
+stoptoken=igiveup
+debuganswer=debugshowanswer
+debugcodes=debugshowcodes
+
+fg=true
+while [[ $guess != $originalword ]]
+do
+if [[ $fg == true ]]
+then
+echo "The scrambled word is $line"
+echo "Please enter your first guess:"
+elif [[ $guess == $debuganswer ]]
+then
+echo "[DEBUG] Printed Correct Answer"
+elif [[ $guess == $debugcodes ]]
+then
+echo "[DEBUG] Error Codes:"
+echo "Code 0: User guessed correctly, and does not want to play anymore."
+echo "Code 2: User has given up."
+else
+echo "That's not the correct word. You typed $guess. Go ahead and try again!"
+echo "As a reminder, the scrambled word is $line."
+fi
+read guess
+if [[ $guess == $stoptoken ]]
+then
+echo "Okay, see you next time then."
+echo "Program Terminated with code 2"
+exit
+fi
+if [[ $guess == $debuganswer ]]
+then
+echo "The correct answer is $originalword."
+fi
+fg=false
+done
+
+if [[ $guess == $originalword ]]
+then
+echo "Well done! You got it! The correct word was $originalword. If you want to play again, type y. Otherwise, press enter and the program will exit." 
+read continueplaying
+fi
+done
+
+echo "Okay, see you next time then."
+echo "Program Terminated with code 0."
+exit
+

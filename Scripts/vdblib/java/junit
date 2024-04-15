@@ -1,0 +1,22 @@
+Gabe's Manual
+-------------
+
+JUnit is a library in Java that is used to test portions of your code for runtime errors or to ensure output is as expected.
+
+Usage
+-----
+Since JUnit is a library, you must import it via maven, or if the library is downloaded, you can import it directly with the import command.
+
+
+JUnit.Assert()
+--------------
+There are many assertions that can be used to verify your code. Some of them are:
+
+assertEquals(x,y): Checks if x and y are equal.
+assertTrue(x): Checks if the boolean value x is true.
+assertFalse(x): Checks if the boolean value x is false.
+> Note: assertTrue() and assertFalse() can also be used with conditions, for example: assertTrue(x > y) will pass if x is greater than y.
+
+-- END OF ENTRY --
+Last Modified: October 20th, 2022
+ 

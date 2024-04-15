@@ -1,0 +1,143 @@
+#!/bin/bash
+# Valerie's Database Program
+
+# Add Font Formatting Tags
+bold=$(tput bold)
+normal=$(tput sgr0)
+RED='\033[1;31m' # Red
+NC='\033[0m' # No Color
+
+# Switch to the correct directory while the program is running.
+cd ~/Scripts/vdblib/
+
+# VDB Version
+# Update this each time the program is modified.
+ver="v1.13.01"
+
+
+# Handle the -add flag
+if [[ $1 == "-add" ]]
+then
+
+# Check if an entry with that name already exists.
+file=$2
+if test -f "$file"; then
+    echo "[${bold}${RED}CRITICAL${NC}${normal}] An entry already exists for $2. Use vdb -mod $2 to edit it."
+    # If the file exists, terminate the program.
+    exit 1
+
+fi
+
+# Create the requested entry
+touch $2
+
+# Open an editor for the newly created entry.
+nano $2
+echo "Successfully added entry $2"
+exit 1
+fi
+
+# Handle the -mod flag
+if [[ $1 == "-mod" ]]
+then
+
+# Check if the requested entry exists.
+file=$2
+if test -f "$file"; 
+then
+sleep 0.01
+else
+echo "[${bold}${RED}CRITICAL${NC}${normal}] No entry exists for $2. You can add one by using vdb -add $2."
+# If the file doesn't exist, terminate the program.
+exit 1
+fi
+
+# Open an editor for the requested entry.
+nano $2
+exit 1
+fi
+
+# Handle the -list flag
+if [[ $1 == "-list" ]]
+then
+echo ""
+echo "${bold}Valerie's Database: List of All Entries${normal}"
+echo "----------------------------------"
+tree
+exit 1
+fi
+
+# Print Usage if no arguments are provided
+if [[ $1 == "" ]]
+then
+less vdbusage
+exit 1
+fi
+
+
+if [[ $1 == "-rm" && $2 == "-nc" ]]
+then
+echo "Deleting entry: $3"
+file=$3
+    if test -f "$file"; 
+        then
+        sleep 0.01
+    else
+        echo "[${bold}${RED}CRITICAL${NC}${normal}] No entry exists for $3."
+        # If the file doesn't exist, terminate the program.
+        exit 1
+    fi
+rm $3
+echo "Done."
+exit 1
+fi
+
+# Handle -rm flag
+if [[ $1 == "-rm" ]]
+then
+    echo "Warning! This will delete the entry $2. Continue? [Yes/No]"
+    read choice
+    if [[ $choice == "yes" || $choice == "y" || $choice == "Y" || $choice == "Yes" || $choice == "YES" ]]
+    then
+    # Check if the requested entry exists.
+    file=$2
+    if test -f "$file"; 
+        then
+        sleep 0.01
+    else
+        echo "[${bold}${RED}CRITICAL${NC}${normal}] No entry exists for $2."
+        # If the file doesn't exist, terminate the program.
+        exit 1
+    fi
+    rm $2
+    echo "Database Entry $2 was deleted."
+    exit 1
+    else
+    echo "Delete entry $2 aborted. No entries were deleted."
+    exit 1
+    fi
+fi
+
+
+
+echo "${bold}Valerie's Database $ver${normal}"
+
+# Check if the requested entry exists.
+file=$1
+if test -f "$file"; then
+    echo "Found entry $1."
+else
+echo "[${bold}${RED}CRITICAL${NC}${normal}] No entry exists for $1. You can add one by using vdb -add $1."
+
+# If the file doesn't exist, terminate the program.
+exit 1
+fi
+echo "To exit, press Q."
+echo "Loading Entry..."
+
+# Give the user time to read the above text.
+sleep 0.5
+
+# Open a viewer for the requested entry (read only).
+less $1
+exit 1

@@ -1,0 +1,15 @@
+Gabe's Manual
+-------------
+JShell or Java Shell, also known as jsh is a command-line interface to a java sandbox.
+
+
+Usage
+-----
+To open JSH in GShell, just type jsh. In bash or zsh, run it with jshell.
+Tp quit JSH, type /quit.
+
+Last Modified: November 8th, 2022
+
+-- END OF ENTRY --
+
+

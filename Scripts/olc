@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Ohm's Law Calculator
+# By [ChatGPT]
+
+# Prompt the user to select which value to solve for
+echo "Which value would you like to solve for?"
+echo "1. Voltage (V)"
+echo "2. Current (I)"
+echo "3. Resistance (Ω)"
+read -p "Enter your choice (1, 2, or 3): " choice
+
+# Get the known values
+if [ $choice -eq 1 ]; then
+    read -p "Enter the value of current (I): " current
+    read -p "Enter the value of resistance (Ω): " resistance
+    voltage=$(echo "scale=2; $current * $resistance" | bc)
+    power=$(echo "scale=2; $current * $voltage" | bc)
+    power_kW=$(echo "scale=2; $power / 1000" | bc)
+    echo "The voltage is: $voltage V"
+    echo "The power consumed is: $power W ($power_kW kW)"
+elif [ $choice -eq 2 ]; then
+    read -p "Enter the value of voltage (V): " voltage
+    read -p "Enter the value of resistance (Ω): " resistance
+    current=$(echo "scale=2; $voltage / $resistance" | bc)
+    power=$(echo "scale=2; $current * $voltage" | bc)
+    power_kW=$(echo "scale=2; $power / 1000" | bc)
+    echo "The current is: $current A"
+    echo "The power consumed is: $power W ($power_kW kW)"
+elif [ $choice -eq 3 ]; then
+    read -p "Enter the value of voltage (V): " voltage
+    read -p "Enter the value of current (I): " current
+    resistance=$(echo "scale=2; $voltage / $current" | bc)
+    power=$(echo "scale=2; $current * $voltage" | bc)
+    power_kW=$(echo "scale=2; $power / 1000" | bc)
+    echo "The resistance is: $resistance Ω"
+    echo "The power consumed is: $power W ($power_kW kW)"
+else
+    echo "Invalid choice. Please enter 1, 2, or 3."
+fi

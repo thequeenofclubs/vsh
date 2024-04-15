@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Valerie's File Information Viewer
+
+echo "Showing File Information for $1"
+
+touch data.tmp
+#touch /Users/tara/desktop/sfiTemp/data.tmp
+
+mdls $1 > data.tmp
+
+while IFS= read -r line;
+do
+varname="line_$((++count))"
+declare "$varname=$line"
+#done <"{{~/Scripts/sfiTemp/data.tmp}}"
+done <"data.tmp"
+
+file_name="$line_$i | grep ^="
+echo $file_name
+
+for ((i=2;i<=count+1;i++));
+do
+mod_line_$i="${line_$i#*=}"
+echo $mod_line_$i
+done

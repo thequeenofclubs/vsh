@@ -1,0 +1,30 @@
+Gabe's Manual
+-------------
+
+printf: C command to format and print some content to the console/output.
+
+Usage: printf("#formatting#",list of variables)
+
+Formatting
+----------
+%d: Integer Variable
+%f: Floating Point Variable
+%x: Character Variable
+
+\n: New Line
+\t: Tab
+\": Quotes
+\': Apostrophe
+
+
+Example
+-------
+int a = 1;
+float b = 2.00;
+int c = 3;
+
+printf("%d and %f and %d",a,b,c);
+Will print: 1 and 2.00 and 3
+
+
+-- END OF ENTRY --

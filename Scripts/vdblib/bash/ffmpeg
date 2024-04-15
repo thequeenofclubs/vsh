@@ -1,0 +1,17 @@
+Gabe's Manual
+-------------
+FFMPEG is a package that is used to analyze, transcode, or otherwise view or modify information about a specific video file.
+FFMPEG contains a program called FFProbe which reads the information about that file.
+FFProbe is the program that powers CheckHDR.
+
+
+Usage
+-----
+ffmpeg [args] [filename]
+
+You can pipe the output to grep to narrow it down to a specific pattern.
+
+
+-- END OF ENTRY --
+Last Modified: October 20th, 2022
+

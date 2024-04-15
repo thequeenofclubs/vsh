@@ -1,0 +1,46 @@
+Valerie's Database
+---------------
+Intended to store information regarding CLI commands and other generic coding information.
+
+Since you didn't provide any arguments, here's how to use the database.
+
+vdb -add entry_name: Add a new entry with the name entry_name.
+
+vdb -mod entry_name: Modify the entry with the name entry_name.
+
+vdb -list: Show a list in tree format of all the entries in the database.
+
+vdb entry_name: Show the entry for name entry_name.
+
+vdb: Show this page.
+
+
+Choosing an Entry Name
+----------------------
+Entry names are to follow the following naming convention:
+language/topic
+
+So, for example, the entry on JUnit for Java would be named: java/junit.
+That entry will show up in gdb -list as : java |
+					       --> junit
+
+
+
+Formatting Entries
+------------------
+Criteria:
+- Entries must begin with the Gabe's Database title, immediately followed by a summary of the entry. For example, if the entry name is ffmpeg, this summary would describe the function of FFMPEG.
+- Titles, Headings and Subheadings must be formatted with a line (-----) underneath it.
+- The end of the entry must be marked with "-- END OF ENTRY --"
+- Entries should have the date of last modification shown under the END OF ENTRY line. 
+
+
+
+-- END OF ENTRY --
+Last Modified: April 5th, 2024
+
+
+
+
+
+ 

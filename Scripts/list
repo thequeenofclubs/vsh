@@ -1,0 +1,9 @@
+#!/bin/bash
+wd=$(pwd)
+echo ${bold}Valerie\'s List Program${normal}
+echo List of all folders and files in ${bold}${RED}$wd${nc}${normal}:
+echo "[Permissions] [# of Subdirs] [Owner] [Group] [File Size (KB)] [Date Modified] [Name]"
+ls -l -G
+
+
+

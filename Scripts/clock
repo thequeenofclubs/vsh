@@ -1,0 +1,8 @@
+#!/bin/bash
+while [ 1 -le 2 ]
+do
+date
+sleep 1
+clear
+done
+
