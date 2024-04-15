@@ -1,11 +1,9 @@
-Gabe's Manual
+Valerie's Database
 -------------
 
 Unix terminal commands are used to perform the basic commands that are required to navigate and operate a
 unix based operating system.
 
-A more condensed version of this entry is available in Obsidian under "Lecture Notes / Week 1 Lecture 1"
-in the EECS2032 Folder.
 
 Main Commands
 -------------
@@ -68,7 +66,7 @@ To perform a command as system instead of as the user, put a backslash in front 
 Understanding File Permissions
 ------------------------------
 
-When running ls -l (ll in gsh), you can see a list of all files with their permissions information at the
+When running ls -l (ll in vsh), you can see a list of all files with their permissions information at the
 beginning of the line. It will look something like this:
 
 -rw------- file.txt

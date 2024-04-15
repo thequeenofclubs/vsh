@@ -1,7 +1,7 @@
-Gabe's Database
+Valerie's Database
 ---------------
 
-gfm: Gabe's File Manager
+vfm: Valerie's File Manager
 A Bash Script for File Operations
 
 Provides a set of functions for creating, renaming, moving, deleting, and searching for files and directories in a Unix-based operating system. The script is compatible with MacOS and can be run from the terminal.
@@ -12,27 +12,27 @@ The script supports the following commands:
 
 - Create
 The `create` command is used to create a new file or directory. It takes two arguments: the type of object to create (`file` or `dir`) and the name of the object.
-To create a new file, run the command `gfm create file [filename]`. For example, to create a file called `test.txt`, run the command `gfm create file test.txt`.
-To create a new directory, run the command `gfm create dir [dirname]`. For example, to create a directory called `testdir`, run the command `gfm create dir testdir`.
+To create a new file, run the command `vfm create file [filename]`. For example, to create a file called `test.txt`, run the command `vfm create file test.txt`.
+To create a new directory, run the command `vfm create dir [dirname]`. For example, to create a directory called `testdir`, run the command `vfm create dir testdir`.
 
 - Rename
 The `rename` command is used to rename an existing file or directory. It takes two arguments: the current name of the object and the new name of the object.
-To rename a file or directory, run the command `gfm rename [oldname] [newname]`. For example, to rename a file called `oldname.txt` to `newname.txt`, run the command `gfm rename oldname.txt newname.txt`.
+To rename a file or directory, run the command `vfm rename [oldname] [newname]`. For example, to rename a file called `oldname.txt` to `newname.txt`, run the command `vfm rename oldname.txt newname.txt`.
 
 - Move
 The `move` command is used to move an existing file or directory to a new location. It takes two arguments: the current location of the object and the new location of the object.
-To move a file or directory, run the command `gfm move [source] [destination]`. For example, to move a file called `test.txt` from the current directory to a directory called `testdir`, run the command `gfm move test.txt testdir/`.
+To move a file or directory, run the command `vfm move [source] [destination]`. For example, to move a file called `test.txt` from the current directory to a directory called `testdir`, run the command `vfm move test.txt testdir/`.
 
 - Delete
 The `delete` command is used to delete an existing file or directory. It takes one argument: the name of the object to delete.
-To delete a file or directory, run the command `gfm delete [name]`. For example, to delete a file called `test.txt`, run the command `gfm delete test.txt`.
+To delete a file or directory, run the command `vfm delete [name]`. For example, to delete a file called `test.txt`, run the command `vfm delete test.txt`.
 
 - Search
 The `search` command is used to search for files or directories by name or extension. It takes two arguments: the type of search to perform (`name` or `ext`) and the query to search for.
 
-To search for files or directories by name, run the command `gfm search name [query]`. For example, to search for all files or directories with the name `filename`, run the command `gfm search name filename`.
+To search for files or directories by name, run the command `vfm search name [query]`. For example, to search for all files or directories with the name `filename`, run the command `vfm search name filename`.
 
-To search for files by extension, run the command `gfm search ext [extension]`. For example, to search for all files with the extension `.txt`, run the command `gfm search ext txt`.
+To search for files by extension, run the command `vfm search ext [extension]`. For example, to search for all files with the extension `.txt`, run the command `vfm search ext txt`.
 
 -- END OF ENTRY --
-Last Modified: March 17, 2023
+Last Modified: April 15, 2024
