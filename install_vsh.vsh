@@ -1,5 +1,6 @@
 #!/bin/zsh
-
+# Valerie's Shell Installation Script
+# Last Updated: April 15, 2024
 
 echo "This is Valerie's Shell Installation Script"
 wd=$(pwd)
