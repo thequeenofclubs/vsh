@@ -15,6 +15,9 @@ if [ "$answer" != "Y" ]; then
 fi
 
 if [ -d "$wd/Scripts" ]; then
+    # Make a copy of the user's current ZSH profile so that it can be reverted if the user wishes to uninstall VSH at a later date.
+    mv ~/.zprofile ~/.zprofile_before_vsh
+    
     # Copy the Scripts folder to the home directory
     mv "$wd/Scripts" ~/Scripts
     # Copy the .zprofile file to the home directory
